@@ -6,4 +6,6 @@ public interface OxyService {
     OxySensorData getData();
 
     double getPercentage();
+
+    void saveData(OxySensorData data);
 }

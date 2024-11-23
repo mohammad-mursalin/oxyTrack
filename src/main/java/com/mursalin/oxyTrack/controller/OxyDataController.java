@@ -2,10 +2,7 @@ package com.mursalin.oxyTrack.controller;
 
 import com.mursalin.oxyTrack.model.OxySensorData;
 import com.mursalin.oxyTrack.service.OxyService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/oxyTrack")
@@ -16,6 +13,11 @@ public class OxyDataController {
 
     public OxyDataController(OxyService service) {
         this.service = service;
+    }
+
+    @PostMapping("/data")
+    public void receiveData(@RequestBody OxySensorData data) {
+        service.saveData(data);
     }
 
     @GetMapping("/")

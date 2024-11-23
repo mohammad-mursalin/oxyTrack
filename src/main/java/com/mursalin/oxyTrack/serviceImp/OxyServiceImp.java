@@ -19,5 +19,10 @@ public class OxyServiceImp implements OxyService {
         return data.getOxygenLevel() * 100;
     }
 
+    @Override
+    public void saveData(OxySensorData data) {
+
+    }
+
 
 }
