@@ -4,6 +4,8 @@ import com.mursalin.oxyTrack.model.OxySensorData;
 import com.mursalin.oxyTrack.service.OxyService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/oxyTrack")
 @CrossOrigin("http://localhost:5173/")
@@ -29,4 +31,10 @@ public class OxyDataController {
     public double getPercentage() {
         return service.getPercentage();
     }
+
+    @GetMapping("/history")
+    public List<OxySensorData> getHistory() {
+
+    }
+    
 }
