@@ -4,6 +4,7 @@ import com.mursalin.oxyTrack.model.OxySensorData;
 import com.mursalin.oxyTrack.service.OxyService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -34,7 +35,7 @@ public class OxyDataController {
 
     @GetMapping("/history")
     public List<OxySensorData> getHistory() {
-
+        return new ArrayList<>();
     }
     
 }
